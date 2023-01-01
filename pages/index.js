@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-{/*import buildspaceLogo from '../assets/buildspace-logo.png';*/}
+import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>VC GPT-3 Writer</title>
+        <title>VC Oracle GPT-3 | buildspace</title>
       </Head>
       <div className="container">
         <div className="header">
@@ -68,7 +68,7 @@ const Home = () => {
         <div className="output">
           <div className="output-header-container">
             <div className="output-header">
-              <h3>The oracle's answer</h3>
+              <h3>The oracle has spoken</h3>
             </div>
           </div>
           <div className="output-content">
@@ -78,7 +78,7 @@ const Home = () => {
       )}
       </div>
       </div>
-    {/*   <div className="badge-container grow">
+      <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
           target="_blank"
@@ -89,7 +89,7 @@ const Home = () => {
             <p>build with buildspace</p>
           </div>
         </a>
-      </div>*/}
+      </div>
     </div>
   );
 };
