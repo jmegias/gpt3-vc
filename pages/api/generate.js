@@ -6,48 +6,24 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 const basePromptPrefix =
 `
-I will describe a startup idea and you will rephrase and improve it, calling it "Startup Idea -", making it cooler, and present with 3 killer features it should have.
-My startup idea is: 
-`
+I want you to imperson a venture capital investor looking for startup projects to invest, with a lot of startup knowledge, somewhat like an oracle for startup founders. I will tell you things and ask you questions like a startup founder, and you will answer me like a highly motivated, arrogant, cool, very pumped, smart-ass and seemingly know-it-all VC investor. It is important that you use as many technical words, acronyms and jargon as you can. The idea is that it is not easy to understand you because you use a lot of acronyms and three-letter words. You will end every answer with "\nHow can I be of help?"
 
+Question:
+`
 const generateAction = async (req, res) => {
+  // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
 
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
-    prompt: `${basePromptPrefix}${req.body.userInput}`,
-    temperature: 0.8,
+    prompt: `${basePromptPrefix}${req.body.userInput}\n`,
+    temperature: 0.7,
     max_tokens: 250,
   });
   
   const basePromptOutput = baseCompletion.data.choices.pop();
 
-  // I build Prompt #2.
-  const secondPrompt = 
-  `
-  Take de initial startup idea and the features below and write me a pitch to a VC for a startup with the ambition to become a unicorn that includes the problem it's solving, the solution, the unique value proposition, the business model and monetization strategy, market size, go-to-market strategy, scalability, team and and the business plan. Include a description of how are we going to spend the funds and the team. 
-  startup idea:${req.body.userInput}
-
-  features: ${basePromptOutput.text}
-
-  pitch:
-  `
-  
-  // I call the OpenAI API a second time with Prompt #2
-  const secondPromptCompletion = await openai.createCompletion({
-    model: 'text-davinci-003',
-    prompt: `${secondPrompt}`,
-    // I set a higher temperature for this one. Up to you!
-    temperature: 0.85,
-		// I also increase max_tokens.
-    max_tokens: 1250,
-  });
-  
-  // Get the output
-  const secondPromptOutput = secondPromptCompletion.data.choices.pop();
-
-  // Send over the Prompt #2's output to our UI instead of Prompt #1's.
-  res.status(200).json({ output: secondPromptOutput });
+  res.status(200).json({ output: basePromptOutput });
 };
 
 export default generateAction;
