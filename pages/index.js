@@ -34,18 +34,18 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>Startup Pitch Generator</title>
+        <title>VC GPT-3 Writer | buildspace</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Startup Pitch Generator</h1>
+            <h1>The VC oracle of truth</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Describe your startup idea</h2>
+            <h2>How can I be of help?</h2>
           </div>
         </div>
-        
+        {/* Add this code here*/}
         <div className="prompt-container">
         <textarea
           placeholder="start typing here"
@@ -68,7 +68,7 @@ const Home = () => {
         <div className="output">
           <div className="output-header-container">
             <div className="output-header">
-              <h3>Pitch</h3>
+              <h3>Output</h3>
             </div>
           </div>
           <div className="output-content">
