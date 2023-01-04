@@ -35,6 +35,18 @@ body {
     gap: 64px;
 }
 
+.prompt {
+    place-content: flex-end center;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    gap: 16px;
+    height: min-content;
+    padding: 0px;
+    width: min-content;
+}
+
 .header {    
     display: flex;
     flex-direction: column;
