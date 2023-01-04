@@ -82,7 +82,7 @@ body {
     place-content: flex-end center;
     align-items: center;
     display: flex;
-    flex: 0 0 auto;
+    flex: 1;
     flex-flow: column nowrap;
     gap: 16px;
     height: min-content;
@@ -284,7 +284,7 @@ textarea {
     place-content: center flex-start;
     align-items: center;
     display: flex;
-    flex: 0 0 auto;
+    flex: 1;
     flex-flow: column nowrap;
     gap: 10px;
     height: min-content;
