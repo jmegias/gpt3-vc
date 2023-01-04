@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>VC Oracle GPT-3 | buildspace</title>
+        <title>VC Oracle with AI </title>
       </Head>
       <div className="container">
         <div className="header">
