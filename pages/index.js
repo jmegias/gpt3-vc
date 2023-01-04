@@ -46,7 +46,6 @@ const Home = () => {
           </div>
         </div>
         {/* Add this code here*/}
-       <div className="output-container">
         <div className="prompt-container">
         <textarea
           placeholder="write your oracle query here"
@@ -63,7 +62,6 @@ const Home = () => {
           {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
           </div>
         </a>
-       </div>
       </div>
         {/* New code I added here */}
         {apiOutput && (
@@ -80,7 +78,18 @@ const Home = () => {
       )}
       </div>
       </div>
-      
+     {/*  <div className="badge-container grow">
+        <a
+          href="https://buildspace.so/builds/ai-writer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="badge">
+            <Image src={buildspaceLogo} alt="buildspace logo" />
+            <p>build with buildspace</p>
+          </div>
+        </a>
+      </div>*/}
     </div>
   );
 };
