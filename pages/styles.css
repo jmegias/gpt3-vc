@@ -63,7 +63,7 @@ body {
 .header-title h1 {
     width: 100%;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 52px;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
@@ -105,7 +105,7 @@ body {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     gap: 10px;
-    height: 150px;
+    height: 120px;
     overflow: hidden;
     padding: 20px;
     position: relative;
@@ -115,7 +115,7 @@ body {
     overflow: auto;
     outline: none;
     resize: none;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     letter-spacing: 0px;
     line-height: 1.6em;
