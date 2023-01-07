@@ -1,4 +1,4 @@
-# VC Impersonator App 🔍
+# VC Oracle App 🔍
 
 This is a standalone REACT app that uses GPT3 to impersonate a venture capitalist and answer questions from founders on a variety of topics, including key business model metrics and pitching.
 
